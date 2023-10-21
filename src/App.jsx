@@ -4,9 +4,9 @@ import WeatherList from './app-components/weather-list';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <h1>Kehinde's Weather App</h1>
-      <h2>Look up the weather for your area!</h2>
+      <h2>Look up the weather in New York, NY!</h2>
       <SingleDetailContainer />
       <WeatherList />
     </div>
