@@ -28,3 +28,5 @@ const WeatherList = () => {
         </div>
     );
 };
+
+export default WeatherList;

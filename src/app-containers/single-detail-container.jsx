@@ -1,12 +1,12 @@
 import React from 'react';
-import CurrentTemp from './app-components/current-temp';
-import SunSet from './app-components/sun-set';
-import SunRise from './app-components/sun-rise';
-import './weather-container.css';
+import CurrentTemp from '../app-components/current-temp';
+import SunSet from '../app-components/sun-set';
+import SunRise from '../app-components/sun-rise';
+import './single-detail-container.css';
 
-const WeatherContainer = () => {
+const SingleDetailContainer = () => {
     return (
-        <div>
+        <div className="single-detail-container">
             <h1>Weather Information</h1>
             <CurrentTemp />
             <SunRise />
@@ -15,4 +15,4 @@ const WeatherContainer = () => {
     );
 }
 
-export default WeatherContainer;
+export default SingleDetailContainer;
