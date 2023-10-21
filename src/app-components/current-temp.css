@@ -1,13 +1,12 @@
-.CurrentTemp {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .CurrentTemp > * {
-    flex-basis: calc(33.33% - 10px);
-    margin-bottom: 20px;
-    border: 1px solid #fff;
-    padding: 10px;
-    box-sizing: border-box;
-  }
+.current-temp-container {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 2px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.current-temp-container h2 {
+  margin-top: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './current-temp.css';
 
 function CurrentTemp() {
   const [temp, setTemp] = useState(null);
@@ -16,7 +17,7 @@ function CurrentTemp() {
   }, []);
 
   return (
-    <div>
+    <div className='current-temp-container'>
       {temp ? <p>Current temperature in New York: {temp}°C</p> : <p>Loading...</p>}
     </div>
   );

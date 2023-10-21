@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './sun-set.css';
 const SunSet = () => {
     const [sunset, setSunset] = useState(null);
 
