@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const MoonSet = () => {
+const SunSet = () => {
     const [sunset, setSunset] = useState(null);
 
     useEffect(() => {
@@ -23,4 +23,4 @@ const MoonSet = () => {
     );
 }
 
-export default MoonSet;
+export default SunSet;
