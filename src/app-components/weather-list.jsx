@@ -19,8 +19,9 @@ const WeatherList = () => {
             <ul>
                 {weatherData.map((weather) => (
                     <li key={weather.id}>
+                        <p>{weather.temp}°C</p>
+                        <p>{weather.app_temp}</p>
                         <p>{weather.weather.description}</p>
-                        <p>{weather.temp}°F</p>
                     </li>
                 ))}
             </ul>
