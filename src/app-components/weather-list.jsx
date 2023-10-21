@@ -1,32 +1,36 @@
 import React, { useState, useEffect } from 'react';
+import './weather-list.css';
 
 const WeatherList = () => {
-    const [weatherData, setWeatherData] = useState([]);
+  const [forecast, setForecast] = useState([]);
 
-    useEffect(() => {
-        const fetchWeatherData = async () => {
-            const response = await fetch(
-                'https://api.weatherbit.io/v2.0/current?city=New%20York,NY&key=8db976b8bb5c459e8b3f53f4ecae2c1c');
-            const data = await response.json();
-            setWeatherData(data.data);
-        };
-        fetchWeatherData();
-    }, []);
+  useEffect(() => {
+    const API_KEY = '8db976b8bb5c459e8b3f53f4ecae2c1c';
+    const url = `https://api.weatherbit.io/v2.0/forecast/daily?city=New%20York,NY&days=7&key=${API_KEY}`;
 
-    return (
-        <div>
-            <h1>Weather List</h1>
-            <ul>
-                {weatherData.map((weather) => (
-                    <li key={weather.id}>
-                        <p>{weather.temp}°C</p>
-                        <p>{weather.app_temp}</p>
-                        <p>{weather.weather.description}</p>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-};
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        setForecast(data.data);
+      })
+      .catch(error => console.log(error));
+  }, []);
+
+  return (
+    <div>
+      <h1>7-Day Weather Forecast</h1>
+      <ul className="weather-list">
+        {forecast.map((day, index) => (
+          <li key={index}>
+            <p>{new Date(day.valid_date).toLocaleDateString()}</p>
+            <p>High: {day.high_temp}°C</p>
+            <p>Low: {day.low_temp}°C</p>
+            <p>Description: {day.weather.description}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default WeatherList;

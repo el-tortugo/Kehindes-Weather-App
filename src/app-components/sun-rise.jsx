@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './sun-rise.css';
 
 const SunRise = () => {
     const [sunrise, setSunrise] = useState(null);
@@ -16,7 +17,7 @@ const SunRise = () => {
     }, []);
 
     return (
-        <div>
+        <div className="sun-rise-container">
             <h1>Sun Rise</h1>
             <h2>Sunrise time: {sunrise ? new Date(sunrise).toLocaleTimeString() : 'Loading...'}</h2>
         </div>

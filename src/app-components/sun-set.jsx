@@ -16,8 +16,8 @@ const SunSet = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Moon Set</h1>
+        <div className="sun-set-container">
+            <h1>Sun Set</h1>
             <h2>Sunset time: {sunset ? new Date(sunset).toLocaleTimeString() : 'Loading...'}</h2>
         </div>
     );
