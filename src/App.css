@@ -1,0 +1,21 @@
+body {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  h1, h2 {
+    color: #fff;
+  }
+  
+  .single-detail-container {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .single-detail-container h1 {
+    color: #fff;
+  }
+  
+  .single-detail-container > * {
+    border: 1px solid #fff;
+  }

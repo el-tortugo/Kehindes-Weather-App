@@ -1,0 +1,13 @@
+.SunSet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.SunSet> * {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
