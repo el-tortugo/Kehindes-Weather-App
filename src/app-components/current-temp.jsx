@@ -18,7 +18,8 @@ function CurrentTemp() {
 
   return (
     <div className='current-temp-container'>
-      {temp ? <p>Current temperature in New York: {temp}°C</p> : <p>Loading...</p>}
+      <h1>Current Temperature</h1>
+      {temp ? <h2> {temp}°C</h2> : <h2>Loading...</h2>}
     </div>
   );
 }
