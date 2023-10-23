@@ -1,4 +1,4 @@
-# Web Development Project 5 - *Name of App Here*
+# Web Development Project 5 - *Kehinde's Weather App*
 
 Submitted by: **Your Name Here**
 
