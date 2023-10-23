@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
 import './sun-rise.css';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 const SunRise = () => {
     const [sunrise, setSunrise] = useState(null);
@@ -8,10 +9,9 @@ const SunRise = () => {
         const API_KEY = '8db976b8bb5c459e8b3f53f4ecae2c1c';
         const url = `https://api.weatherbit.io/v2.0/forecast/daily?city=New%20York,NY&key=${API_KEY}`;
 
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                setSunrise(data.data[0].sunrise);
+        axios.get(url)
+            .then(response => {
+                setSunrise(response.data.data[0].sunrise);
             })
             .catch(error => console.log(error));
     }, []);
